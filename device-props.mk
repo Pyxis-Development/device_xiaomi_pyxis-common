@@ -266,6 +266,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Permissions
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.control_privapp_permissions=log
+    
+    
+# QC framework value-adds
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    ro.vendor.qti.va_aosp.support=1
+
+PRODUCT_ODM_PROPERTIES += \
+    ro.vendor.qti.va_odm.support=1
 
 # QCOM
 PRODUCT_PROPERTY_OVERRIDES +=  \
