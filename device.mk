@@ -69,9 +69,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service \
+    libdng_sdk.vendor \
     libxml2 \
     Snap
-
+    
 # Codec2 modules
 PRODUCT_PACKAGES += \
     com.android.media.swcodec \
