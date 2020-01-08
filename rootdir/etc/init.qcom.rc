@@ -208,6 +208,9 @@ on boot
     chown system system /sys/class/leds/led:switch_1/brightness
     chown system system /sys/class/leds/flashlight/brightness
 
+    # Allow access to UFS device attributes on sysfs
+    chown system system /sys/devices/platform/soc/1d84000.ufshc/auto_hibern8
+
     # Create directory used for display
     # for backward compatibility
     mkdir /persist/display 0770 system graphics
