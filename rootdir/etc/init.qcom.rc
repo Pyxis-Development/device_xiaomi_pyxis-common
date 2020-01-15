@@ -67,7 +67,6 @@ on early-boot
     write /sys/kernel/boot_slpi/boot 1
     write /sys/devices/virtual/cvp/cvp/boot 1
     exec u:r:qti_init_shell:s0 -- /vendor/bin/init.qcom.early_boot.sh
-    exec u:r:qti_init_shell:s0 -- /vendor/bin/init.qti.can.sh
 
     # for backward compatibility
     chown system system /persist/sensors
@@ -475,12 +474,6 @@ on property:persist.vendor.ssr.enable_ramdumps=1
 
 on property:persist.vendor.ssr.enable_ramdumps=0
     write /sys/module/subsystem_restart/parameters/enable_ramdumps 0
-
-on property:persist.vendor.sys.rawdump_copy=1
-    write /sys/kernel/dload/emmc_dload 1
-
-on property:persist.vendor.sys.rawdump_copy=0
-    write /sys/kernel/dload/emmc_dload 0
 
 on property:persist.vendor.sys.rawdump_copy=1
     write /sys/kernel/dload/emmc_dload 1
