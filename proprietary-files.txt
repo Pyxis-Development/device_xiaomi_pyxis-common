@@ -36,7 +36,6 @@ vendor/lib/libcomprcapture.so
 vendor/lib/libdrc.so
 vendor/lib/libexthwplugin.so
 vendor/lib/libqtigef.so
-vendor/lib/libsndmonitor.so
 vendor/lib/libspkrprot.so
 vendor/lib/libsurround_3mic_proc.so
 vendor/lib/libultrasound.so
@@ -61,7 +60,6 @@ vendor/lib64/libbatterylistener.so
 vendor/lib64/libcomprcapture.so
 vendor/lib64/libexthwplugin.so
 vendor/lib64/libqtigef.so
-vendor/lib64/libsndmonitor.so
 vendor/lib64/libspkrprot.so
 vendor/lib64/libultrasound.so
 vendor/lib64/soundfx/libasphere.so
@@ -232,7 +230,6 @@ vendor/etc/cne/wqeclient/VZW/VZW_profile4.xml
 vendor/etc/cne/wqeclient/VZW/VZW_profile5.xml
 vendor/etc/cne/wqeclient/VZW/VZW_profile6.xml
 vendor/lib/libcne.so
-vendor/lib/libcneapiclient.so
 vendor/lib/libcneoplookup.so
 vendor/lib/libcneqmiutils.so
 vendor/lib/libjnihelper.so
@@ -248,7 +245,6 @@ vendor/lib/vendor.qti.hardware.data.dynamicdds@1.0.so
 vendor/lib/vendor.qti.hardware.data.iwlan@1.0.so
 vendor/lib/vendor.qti.hardware.data.qmi@1.0.so
 vendor/lib64/libcne.so
-vendor/lib64/libcneapiclient.so
 vendor/lib64/libcneoplookup.so
 vendor/lib64/libcneqmiutils.so
 vendor/lib64/libjnihelper.so
@@ -400,7 +396,6 @@ vendor/lib/libdrmutils.so
 vendor/lib/libgpu_tonemapper.so
 vendor/lib/libgralloccore.so
 vendor/lib/libgrallocutils.so
-vendor/lib/libqdMetaData.so
 vendor/lib/libqdutils.so
 vendor/lib/libqservice.so
 vendor/lib/libsdmcore.so
@@ -418,14 +413,11 @@ vendor/lib64/libdrmutils.so
 vendor/lib64/libgpu_tonemapper.so
 vendor/lib64/libgralloccore.so
 vendor/lib64/libgrallocutils.so
-vendor/lib64/libqdMetaData.so
 vendor/lib64/libqdutils.so
 vendor/lib64/libqservice.so
 vendor/lib64/libsdmcore.so
 vendor/lib64/libsdmextension.so
 vendor/lib64/libsdmutils.so
-vendor/lib/libdisplayconfig.so
-vendor/lib64/libdisplayconfig.so
 
 # ESE-Powermanager
 vendor/bin/hw/vendor.qti.esepowermanager@1.0-service
@@ -793,7 +785,6 @@ vendor/lib/libhdmipassthru.so
 vendor/lib/libI420colorconvert.so
 vendor/lib/libmiracast.so
 vendor/lib/libmm-color-convertor.so
-vendor/lib/libmm-omxcore.so
 vendor/lib/libmmosal_proprietary.so
 vendor/lib/libmmparser_lite_proprietary.so
 vendor/lib/libmmrtpdecoder_proprietary.so
@@ -838,7 +829,6 @@ vendor/lib64/libmiracast.so
 vendor/lib64/libmls_utils_vendor.so
 vendor/lib64/libmls_v4l2enc_vendor.so
 vendor/lib64/libmm-color-convertor.so
-vendor/lib64/libmm-omxcore.so
 vendor/lib64/libmmosal_proprietary.so
 vendor/lib64/libmmparser_lite_proprietary.so
 vendor/lib64/libMpeg4SwEncoder.so

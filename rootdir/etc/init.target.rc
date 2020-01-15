@@ -91,12 +91,16 @@ on post-fs-data
     mkdir /data/vendor/nnhal 0700 system system
     mkdir /data/vendor/thermal 0771 root system
     mkdir /data/vendor/thermal/config 0771 root system
-
+    mkdir /data/vendor/nfc 0770 nfc nfc
     chmod 0644 /dev/elliptic0
     chmod 0644 /dev/elliptic1
     mkdir /data/vendor/charge_logger 0771 system system
     mkdir /data/vendor/misc/display 0771 system system
     chmod 666 /sys/class/drm/card0-DSI-1/disp_count
+    chown system system /sys/class/drm/card0-DSI-1/dim_alpha
+    chown system system /sys/class/drm/card0-DSI-1/fod_ui_ready
+    chown system system /sys/class/drm/card0-DSI-1/dim_layer_enable
+    chown system system /sys/class/drm/card0-DSI-1/dimlayer_hbm_enabled
 
 #add charge_logger service for dump charge message
 service charge_logger /vendor/bin/charge_logger
@@ -132,8 +136,8 @@ on boot
     chown system system /sys/class/thermal/thermal_message/sconfig
     chown system system /sys/class/touch/tp_dev/fod_status
 
-    # Add a cpuset for the camera daemon
-    # We want all cores for camera
+# Add a cpuset for the camera daemon
+# We want all cores for camera
     mkdir /dev/cpuset/camera-daemon
     write /dev/cpuset/camera-daemon/cpus 0-7
     write /dev/cpuset/camera-daemon/mems 0
@@ -143,23 +147,8 @@ on boot
 
     chown system system /sys/class/backlight/panel0-backlight/brightness_clone
 
-    ####Regionalization config and prop files####
-    chmod 0644 /persist/speccfg/spec
-    chmod 0644 /persist/speccfg/devicetype
-    chmod 0644 /persist/speccfg/mbnversion
-    chmod 0644 /persist/speccfg/.not_triggered
-    chmod 0644 /persist/speccfg/vendor_ro.prop
-    chmod 0644 /persist/speccfg/vendor_persist.prop
-    chmod 0644 /persist/speccfg/submask
-    chmod 0644 /persist/speccfg/partition
-    chown system system /persist/speccfg/spec
-    chown system system /persist/speccfg/devicetype
-    chown system system /persist/speccfg/mbnversion
-    chown system system /persist/speccfg/.not_triggered
-    chown system system /persist/speccfg/vendor_ro.prop
-    chown system system /persist/speccfg/vendor_persist.prop
-    chown system system /persist/speccfg/submask
-    chown system system /persist/speccfg/partition
+# access permission for DT2W
+    chown system system /dev/input/event2
 
 #USB controller configuration
     setprop vendor.usb.rndis.func.name "gsi"
@@ -262,21 +251,6 @@ service vendor.hvdcp_opti /system/vendor/bin/hvdcp_opti
     user root
     group system wakelock
 
-# imsdatadaemon starts with root and UID will be downgraded to RADIO.
-service vendor.imsqmidaemon /system/vendor/bin/imsqmidaemon
-    class main
-    user radio
-    socket ims_qmid stream 0660 system radio
-    group radio log diag
-
-# imsdatadaemon starts with root and UID will be downgraded to RADIO.
-service vendor.imsdatadaemon /system/vendor/bin/imsdatadaemon
-    class main
-    user radio
-    socket ims_datad stream 0660 system radio
-    group system wifi radio inet log diag
-    disabled
-
 service vendor.imsrcsservice /system/vendor/bin/imsrcsd
     class main
     user radio
@@ -364,30 +338,14 @@ on property:vendor.audio.cit.spkcal.copy=true
     chmod 666 /mnt/vendor/persist/audio/tas2562_cal.bin
     chmod 666 /mnt/vendor/persist/audio/tas2562_chk.txt
 
-service displayfeature /system/bin/displayfeature
-    class late_start
-    user root
-    group root
-
-on property:init.svc.surfaceflinger=stopped
-    stop displayfeature
-
-on property:init.svc.surfaceflinger=running
-    start displayfeature
-
-on property:init.svc.surfaceflinger=restarting
-    stop displayfeature
 
 on property:init.svc.zygote=stopped
-    stop displayfeature
     stop ppd
 
 on property:init.svc.zygote=running
-    start displayfeature
     start ppd
 
 on property:init.svc.zygote=restarting
-    stop displayfeature
     stop ppd
 
 service ftc_update /vendor/bin/ftcupdate
@@ -405,6 +363,7 @@ on post-fs-data
     restorecon /sys/module/migt/parameters/migt_ms
     chmod 0777 /sys/module/migt/parameters/migt_thresh
     restorecon /sys/module/migt/parameters/migt_thresh
+    setprop persist.sys.sf.color_saturation 1.0
 
 on property:vendor.audio.pa.ftcupdate=0
     start ftc_update
