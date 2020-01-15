@@ -23,13 +23,13 @@
 #include <fstream>
 
 #define LCD_LED         "/sys/class/backlight/panel0-backlight/"
-#define WHITE_LED       "/sys/class/leds/white/"
+#define WHITE_LED       "/sys/class/leds/red/"
 
 #define BREATH          "breath"
 #define BRIGHTNESS      "brightness"
 
 #define MAX_LED_BRIGHTNESS    255
-#define MAX_LCD_BRIGHTNESS    2047
+#define MAX_LCD_BRIGHTNESS    4095
 
 namespace {
 /*
