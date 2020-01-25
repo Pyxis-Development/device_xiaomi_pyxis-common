@@ -37,16 +37,12 @@
 #define FOD_ERROR 8
 #define FOD_ERROR_VENDOR 6
 
-#define FOD_SENSOR_X 445
-#define FOD_SENSOR_Y 1910
-#define FOD_SENSOR_SIZE 190
-
 namespace vendor {
 namespace lineage {
 namespace biometrics {
 namespace fingerprint {
 namespace inscreen {
-namespace V1_0 {
+namespace V1_1 {
 namespace implementation {
 
 template <typename T>
@@ -56,20 +52,19 @@ static void set(const std::string& path, const T& value) {
 }
 
 FingerprintInscreen::FingerprintInscreen() {
-    this->mFodCircleVisible = false;
     xiaomiFingerprintService = IXiaomiFingerprint::getService();
 }
 
 Return<int32_t> FingerprintInscreen::getPositionX() {
-    return FOD_SENSOR_X;
+    return 455;
 }
 
 Return<int32_t> FingerprintInscreen::getPositionY() {
-    return FOD_SENSOR_Y;
+    return 1910;
 }
 
 Return<int32_t> FingerprintInscreen::getSize() {
-    return FOD_SENSOR_SIZE;
+    return 190;
 }
 
 Return<void> FingerprintInscreen::onStartEnroll() {
@@ -80,28 +75,32 @@ Return<void> FingerprintInscreen::onFinishEnroll() {
     return Void();
 }
 
+Return<void> FingerprintInscreen::switchHbm(bool enabled) {
+    if (enabled) {
+        set(DISPPARAM_PATH, DISPPARAM_HBM_FOD_ON);
+    } else {
+        set(DISPPARAM_PATH, DISPPARAM_HBM_FOD_OFF);
+    }
+    return Void();
+}
+
 Return<void> FingerprintInscreen::onPress() {
-    set(DISPPARAM_PATH, DISPPARAM_FOD_BACKLIGHT_HBM);
     xiaomiFingerprintService->extCmd(COMMAND_NIT, PARAM_NIT_630_FOD);
     return Void();
 }
 
 Return<void> FingerprintInscreen::onRelease() {
-    set(DISPPARAM_PATH, DISPPARAM_FOD_BACKLIGHT_RESET);
     xiaomiFingerprintService->extCmd(COMMAND_NIT, PARAM_NIT_NONE);
     return Void();
 }
 
 Return<void> FingerprintInscreen::onShowFODView() {
     set(FOD_STATUS_PATH, FOD_STATUS_ON);
-    this->mFodCircleVisible = true;
     return Void();
 }
 
 Return<void> FingerprintInscreen::onHideFODView() {
     set(FOD_STATUS_PATH, FOD_STATUS_OFF);
-    set(DISPPARAM_PATH, DISPPARAM_FOD_BACKLIGHT_RESET);
-    this->mFodCircleVisible = false;
     return Void();
 }
 
@@ -121,6 +120,7 @@ Return<void> FingerprintInscreen::setLongPressEnabled(bool) {
 
 Return<int32_t> FingerprintInscreen::getDimAmount(int32_t brightness) {
     float alpha;
+    int realBrightness = brightness * 2047 / 255;
 
     if (brightness > 62) {
         alpha = 1.0 - pow(brightness / 255.0 * 430.0 / 600.0, 0.45);
@@ -135,12 +135,12 @@ Return<bool> FingerprintInscreen::shouldBoostBrightness() {
     return false;
 }
 
-Return<void> FingerprintInscreen::setCallback(const sp<IFingerprintInscreenCallback>&) {
+Return<void> FingerprintInscreen::setCallback(const sp<V1_0::IFingerprintInscreenCallback>&) {
     return Void();
 }
 
 }  // namespace implementation
-}  // namespace V1_0
+}  // namespace V1_1
 }  // namespace inscreen
 }  // namespace fingerprint
 }  // namespace biometrics
