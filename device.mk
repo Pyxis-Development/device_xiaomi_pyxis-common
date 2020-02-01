@@ -189,7 +189,7 @@ PRODUCT_COPY_FILES += \
     
 # Lights
 PRODUCT_PACKAGES += \
-    lights.sdm710
+    lights.sdm710 \
     android.hardware.light@2.0-service.xiaomi_grus
     
 # Media
