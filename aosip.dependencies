@@ -3,4 +3,8 @@
     "repository": "kowalski-grus",
     "target_path": "kernel/xiaomi/grus"
   }
+  {
+    "repository": "vendor_xiaomi_grus",
+    "target_path": "vendor/xiaomi/grus"
+  }
 ]
