@@ -3,7 +3,7 @@
     "remote":      "github",
     "repository":  "ktommy91/kernel_xiaomi_sdm710",
     "target_path": "kernel/xiaomi/pyxis",
-    "branch":      "ten"
+    "branch":      "ten-dev"
   }
   {
     "remote":      "github",
