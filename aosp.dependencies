@@ -1,9 +1,9 @@
 [
   {
     "remote":      "github",
-    "repository":  "ktommy91/kernel_xiaomi_sdm710",
+    "repository":  "coderzstas/pyxis_caf",
     "target_path": "kernel/xiaomi/pyxis",
-    "branch":      "ten-dev"
+    "branch":      "master"
   }
   {
     "remote":      "github",
