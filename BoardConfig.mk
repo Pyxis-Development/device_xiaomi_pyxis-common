@@ -6,7 +6,7 @@
 
 BOARD_VENDOR := xiaomi
 
-DEVICE_PATH := device/xiaomi/grus
+DEVICE_PATH := device/xiaomi/pyxis
 
 # Architecture
 TARGET_ARCH := arm64
@@ -43,10 +43,10 @@ BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_TAGS_OFFSET := 0x00000100
 BOARD_RAMDISK_OFFSET := 0x01000000
 TARGET_KERNEL_ARCH := arm64
-TARGET_KERNEL_CLANG_COMPILE := true
+#TARGET_KERNEL_CLANG_COMPILE := true
 BOARD_KERNEL_SEPARATED_DTBO := true
-TARGET_KERNEL_SOURCE := kernel/xiaomi/grus
-TARGET_KERNEL_CONFIG := kowalski_defconfig
+TARGET_KERNEL_SOURCE := kernel/xiaomi/pyxis
+TARGET_KERNEL_CONFIG := kangaroox-pyxis_defconfig
 
 # Platform
 TARGET_BOARD_PLATFORM := sdm710
@@ -57,7 +57,7 @@ TARGET_BOARD_PLATFORM_GPU := qcom-adreno616
 DEXPREOPT_GENERATE_APEX_IMAGE := true
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := grus
+TARGET_OTA_ASSERT_DEVICE := pyxis
 
 # Audio
 AUDIO_FEATURE_ENABLED_AAC_ADTS_OFFLOAD := true
@@ -171,6 +171,10 @@ BOARD_VNDK_VERSION := current
 PRODUCT_FULL_TREBLE_OVERRIDE := true
 PRODUCT_VENDOR_MOVE_ENABLED := true
 
+# Vendor init
+TARGET_INIT_VENDOR_LIB := libinit_pyxis
+TARGET_RECOVERY_DEVICE_MODULES := libinit_pyxis
+
 # Verified Boot
 BOARD_AVB_ENABLE := true
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 2
@@ -190,4 +194,4 @@ WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # Inherit from the proprietary version
--include vendor/xiaomi/grus/BoardConfigVendor.mk
+-include vendor/xiaomi/pyxis/BoardConfigVendor.mk

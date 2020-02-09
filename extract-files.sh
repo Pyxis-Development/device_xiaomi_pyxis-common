@@ -7,7 +7,7 @@
 
 set -e
 
-DEVICE=grus
+DEVICE=pyxis
 VENDOR=xiaomi
 
 # Load extract_utils and do some sanity checks

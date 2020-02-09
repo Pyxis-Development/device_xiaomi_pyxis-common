@@ -27,7 +27,7 @@
  * IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#define LOG_TAG "android.hardware.power@1.2-service.xiaomi_grus"
+#define LOG_TAG "android.hardware.power@1.2-service.xiaomi_pyxis"
 
 #include <android/log.h>
 #include <hidl/HidlTransportSupport.h>

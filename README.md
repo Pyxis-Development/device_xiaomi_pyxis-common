@@ -5,15 +5,15 @@ Copyright (C) 2020 - Xiaomi SDM-710 Project
 Basic   | Spec Sheet
 -------:|:----------
 CPU     | Hexa-Core Kryo 360 Silver 1.7GHz
-CPU     | Dual-Core Kryo 360 Gold 2.3GHz
-Chipset | Qualcomm Snapdragon 712, SDM712
+CPU     | Dual-Core Kryo 360 Gold 2.2GHz
+Chipset | Qualcomm Snapdragon 710, SDM710
 GPU     | Adreno 616
 ROM     | 64/128GB
 RAM     | 6GB
 Android | 9.0
-Battery | 3070 mAh, Li-Po
-Display | 1080x2340 pixels, 5.97" AMOLED
-Rear Camera  | 48MP+8MP+13MP, AI Camera
-Front Camera | 20MP
+Battery | 4030 mAh, Li-Po
+Display | 1080x2340 pixels, 6.39" SuperAMOLED
+Rear Camera  | 48MP+8MP+2MP, AI Camera
+Front Camera | 32MP
 
-![Xiaomi Mi 9 SE](https://xiaomi-mi.com/uploads/CatalogueImage/Mi9_se_blue%20(1)_17416_1550676658.jpg "Xiaomi Mi 9 SE in blue")
+![Xiaomi MI 9 Lite](https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-mi-cc9-2.jpg "Xiaomi MI 9 Lite")

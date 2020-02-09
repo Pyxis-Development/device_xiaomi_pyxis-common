@@ -1,7 +1,7 @@
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosip_grus.mk
+    $(LOCAL_DIR)/aosip_pyxis.mk
 
 COMMON_LUNCH_CHOICES := \
-    aosip_grus-user \
-    aosip_grus-userdebug \
-    aosip_grus-eng
+    aosip_pyxis-user \
+    aosip_pyxis-userdebug \
+    aosip_pyxis-eng

@@ -136,7 +136,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     
 # Display density
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.sf.lcd_density=480
+    ro.sf.lcd_density=440
 
 # Display features
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -164,8 +164,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # FOD
 PRODUCT_PROPERTY_OVERRIDES +=  \
-    persist.vendor.sys.fp.fod.location.X_Y=448,1938 \
-    persist.vendor.sys.fp.fod.size.width_height=185,185 \
+    persist.vendor.sys.fp.fod.location.X_Y=445,1910 \
+    persist.vendor.sys.fp.fod.size.width_height=190,190 \
     ro.hardware.fp.fod=true
 
 # FRP

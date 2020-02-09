@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-LOCAL_PATH := device/xiaomi/grus
+LOCAL_PATH := device/xiaomi/pyxis
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
@@ -13,7 +13,7 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
 # Inherit proprietary files
-$(call inherit-product-if-exists, vendor/xiaomi/grus/grus-vendor.mk)
+$(call inherit-product-if-exists, vendor/xiaomi/pyxis/pyxis-vendor.mk)
 
 # AID/fs configs
 PRODUCT_PACKAGES += \
@@ -116,12 +116,12 @@ PRODUCT_PACKAGES += \
     
 # Fingerprint
 PRODUCT_PACKAGES += \
-    vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.xiaomi_grus \
+    vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.xiaomi_pyxis \
     vendor.goodix.hardware.biometrics.fingerprint@2.1.vendor
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/config/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml \
-    $(LOCAL_PATH)/fingerprint/android.hardware.biometrics.fingerprint@2.1-service.xiaomi_grus.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.biometrics.fingerprint@2.1-service.xiaomi_grus.rc
+    $(LOCAL_PATH)/fingerprint/android.hardware.biometrics.fingerprint@2.1-service.xiaomi_pyxis.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.biometrics.fingerprint@2.1-service.xiaomi_pyxis.rc
     
 # Filesystem table
 PRODUCT_PACKAGES += \
@@ -142,6 +142,13 @@ PRODUCT_PACKAGES += \
     android.hidl.base@1.0_system \
     android.hidl.manager@1.0 \
     android.hidl.manager@1.0_system
+    
+# IFAA manager
+PRODUCT_PACKAGES += \
+    org.ifaa.android.manager
+
+PRODUCT_BOOT_JARS += \
+    org.ifaa.android.manager
        
 # IMS
 PRODUCT_PACKAGES += \
@@ -191,7 +198,7 @@ PRODUCT_COPY_FILES += \
 # Lights
 PRODUCT_PACKAGES += \
     lights.sdm710 \
-    android.hardware.light@2.0-service.xiaomi_grus
+    android.hardware.light@2.0-service.xiaomi_pyxis
     
 # Media
 PRODUCT_PACKAGES += \
@@ -293,7 +300,7 @@ PRODUCT_COPY_FILES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.2-service.xiaomi_grus
+    android.hardware.power@1.2-service.xiaomi_pyxis
 
 # Power Config
 PRODUCT_COPY_FILES += \

@@ -7,7 +7,7 @@
 
 set -e
 
-DEVICE=grus
+DEVICE=pyxis
 VENDOR=xiaomi
 
 INITIAL_COPYRIGHT_YEAR=2019
