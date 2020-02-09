@@ -9,9 +9,6 @@ LOCAL_PATH := device/xiaomi/pyxis
 # Inherit from those products. Most specific first.
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
-# Enable updating of APEXes
-$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
-
 # Inherit proprietary files
 $(call inherit-product-if-exists, vendor/xiaomi/pyxis/pyxis-vendor.mk)
 
@@ -246,10 +243,7 @@ PRODUCT_COPY_FILES += \
     
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-aosip
-
-PRODUCT_ENFORCE_RRO_TARGETS := *
+    $(LOCAL_PATH)/overlay
     
 # Perf
 PRODUCT_COPY_FILES += \
