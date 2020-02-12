@@ -217,7 +217,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.audio.soundtrigger.training.level=50 \
     vendor.audio.soundtrigger.user.adsp.level=60 \
     vendor.audio.soundtrigger.user.level=60
- 
+
 # IMS
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.dbg.ims_volte_enable=1 \

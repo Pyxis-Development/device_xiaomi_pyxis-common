@@ -132,9 +132,9 @@ on boot
     chmod 2770 /dev/socket/qmux_radio
 
     mkdir /persist/drm 0770 system system
-    mkdir /persist/bluetooth 0770 bluetooth bluetooth
+    mkdir /mnt/vendor/persist/bluetooth 0770 bluetooth bluetooth
     mkdir /persist/misc 0770 system system
-    mkdir /persist/alarm 0770 system system
+    mkdir /mnt/vendor/persist/alarm 0770 system system
     mkdir /mnt/vendor/persist/time 0770 system system
     mkdir /mnt/vendor/persist/secnvm 0770 system system
     mkdir /mnt/vendor/persist/iar_db 0770 system system
@@ -155,10 +155,7 @@ on boot
     #Remove SUID bit for iproute2 ip tool
     chmod 0755 /system/bin/ip
 
-
     chmod 0444 /sys/devices/platform/msm_hsusb/gadget/usb_state
-
-    setprop net.tcp.2g_init_rwnd 10
 
     # To prevent out of order acknowledgements from making
     # connection tracking to treat them as not belonging to
@@ -328,14 +325,6 @@ on post-fs-data
     # Create directories for wifihal services
     mkdir /dev/socket/wifihal 0770 wifi wifi
     chmod 2770 /dev/socket/wifihal
-
-    # Create directory from IMS services
-    mkdir /data/shared 0755
-    chown system system /data/shared
-
-    # Create directory for FOTA
-    mkdir /data/fota 0771
-    chown system system /data/fota
 
     # Create directory for hostapd
     mkdir /data/hostapd 0770 system wifi
