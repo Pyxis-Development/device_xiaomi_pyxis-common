@@ -7,8 +7,8 @@
   }
   {
     "remote":      "github",
-    "repository":  "xiaomi-sdm710/android_vendor_xiaomi_pyxis",
+    "repository":  "Mashopy/vendor_xiaomi_pyxis",
     "target_path": "vendor/xiaomi/pyxis",
-    "branch":      "scratch"
+    "branch":      "ten"
   }
 ]
