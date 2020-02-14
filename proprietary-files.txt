@@ -1575,6 +1575,7 @@ lib64/libwfduibcsrc.so
 lib64/libwfduibcsrcinterface.so
 -priv-app/WfdService/WfdService.apk
 vendor/bin/wifidisplayhalservice
+vendor/etc/init/android.hardware.drm@1.1-service.wfdhdcp.rc|c266f08783a17f6583e3f22c85e55b0c200442ea
 vendor/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc
 vendor/etc/wfdconfig.xml
 vendor/lib/libhdcp1prov.so
