@@ -501,6 +501,7 @@ vendor/lib/libGPQTEEC_vendor.so
 vendor/lib/libGPreqcancel.so
 vendor/lib/libGPreqcancel_svc.so
 vendor/lib/libGPTEE_vendor.so
+vendor/lib/liboemcrypto.so|c8b37d08d0f9da3c2f049200eb5cda20ba551a5b
 vendor/lib/libqisl.so
 vendor/lib/libQSEEComAPI.so
 vendor/lib/librmp.so
@@ -519,6 +520,7 @@ vendor/lib64/libGPQTEEC_vendor.so
 vendor/lib64/libGPreqcancel.so
 vendor/lib64/libGPreqcancel_svc.so
 vendor/lib64/libGPTEE_vendor.so
+vendor/lib64/liboemcrypto.so|983e999d658fb38e8f3667c521da1538f5424668
 vendor/lib64/libqisl.so
 vendor/lib64/libQSEEComAPI.so
 vendor/lib64/librmp.so
@@ -532,11 +534,13 @@ vendor/lib64/libStDrvInt.so
 vendor/lib64/libtzdrmgenprov.so
 
 # DRM-Widevine
-vendor/bin/hw/android.hardware.drm@1.2-service.widevine
-vendor/etc/init/android.hardware.drm@1.2-service.widevine.rc
-vendor/lib/mediadrm/libwvdrmengine.so
-vendor/lib64/libwvhidl.so
-vendor/lib64/mediadrm/libwvdrmengine.so
+vendor/bin/hw/android.hardware.drm@1.2-service.widevine|60fe8f977d6ec64dc00f5708ec625252bb6108ac
+vendor/etc/init/android.hardware.drm@1.2-service.widevine.rc|e3cb732c0bd519988100675edf385d947abf5f6c
+vendor/lib/mediadrm/libdrmclearkeyplugin.so|53dcb11babe6275870ec5f7344433df45fb55266
+vendor/lib/mediadrm/libwvdrmengine.so|90ded8941a123f8b38ab7359e35185f44b673340
+vendor/lib64/libwvhidl.so|fb2d7d52bfa8cc8095d20e476764714c95913d87
+vendor/lib64/mediadrm/libdrmclearkeyplugin.so|dc625f5c937da3f32c766e5969a981525852d5df
+vendor/lib64/mediadrm/libwvdrmengine.so|9681689b67eaf43aba4d2e420c41f1b39352956e
 
 # Display
 vendor/etc/dsi_ss_ea8076_fhd_cmd_display_f3b_mi.xml
