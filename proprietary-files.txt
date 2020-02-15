@@ -885,7 +885,6 @@ lib64/libmmosal.so
 lib64/libmmparser_lite.so
 lib64/libmmrtpdecoder.so
 lib64/libmmrtpencoder.so
-lib64/libOmxMux.so
 product/lib/vendor.qti.hardware.vpp@1.1.so
 product/lib/vendor.qti.hardware.vpp@1.2.so
 product/lib64/vendor.qti.hardware.vpp@1.1.so
