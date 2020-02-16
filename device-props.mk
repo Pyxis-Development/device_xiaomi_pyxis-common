@@ -161,6 +161,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # DRM
 PRODUCT_PROPERTY_OVERRIDES += \
     drm.service.enabled=true
+    
+# FM
+PRODUCT_PROPERTY_OVERRIDES += \
+    vendor.hw.fm.init=0
 
 # FOD
 PRODUCT_PROPERTY_OVERRIDES +=  \
