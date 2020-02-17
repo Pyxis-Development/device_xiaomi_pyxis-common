@@ -1,7 +1,7 @@
 [
   {
     "remote":      "github",
-    "repository":  "coderzstas/pyxis_caf",
+    "repository":  "Mashopy/kernel_xiaomi_pyxis",
     "target_path": "kernel/xiaomi/pyxis",
     "branch":      "master"
   }
