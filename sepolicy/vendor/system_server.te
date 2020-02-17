@@ -1,2 +1,4 @@
 allow system_server init:binder call;
+allow system_server sysfs::file getattr;
+
 binder_call(system_server, glgps)

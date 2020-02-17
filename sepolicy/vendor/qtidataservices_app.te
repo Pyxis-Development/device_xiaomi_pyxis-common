@@ -1,0 +1,4 @@
+allow qtidataservices_app qtidataservices_app:socket read;
+allow qtidataservices_app qtidataservices_app:socket create;
+allow qtidataservices_app qtidataservices_app:socket ioctl;
+allow qtidataservices_app qtidataservices_app:socket write;

@@ -1,0 +1,5 @@
+allow fsck fsck:capability dac_override;
+allow fsck tmpfs:blk_file getattr;
+allow fsck mnt_vendor_file:dir getattr;
+allow fsck block_device:blk_file read;
+allow fsck block_device:blk_file open;
