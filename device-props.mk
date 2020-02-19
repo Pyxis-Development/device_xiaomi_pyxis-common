@@ -156,6 +156,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.display.ad=1 \
     ro.vendor.display.cabl=2 \
     ro.vendor.display.sensortype=2 \
+    persist.sys.sf.color_saturation=1.0 \
     vendor.display.enable_default_color_mode=1
 
 # DRM
@@ -192,6 +193,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.enable_gl_backpressure=1 \
     debug.sf.enable_hwc_vds=1 \
     debug.sf.hw=0 \
+    persist.demo.hdmirotationlock=false \
     debug.sf.recomputecrop=0 \
     ro.hardware.vulkan=adreno \
     ro.opengles.version=196610 \
