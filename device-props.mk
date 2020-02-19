@@ -141,12 +141,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Display features
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.display.type=oled \
-    ro.displayfeature.histogram.enable=true \
     ro.eyecare.brightness.level=5 \
     ro.eyecare.brightness.threshold=11 \
-    ro.hist.brightness.threshold=7 \
-    sys.displayfeature_hidl=true \
-    sys.displayfeature.hbm.enable=true
+    ro.hist.brightness.threshold=7
 
 # Display post-processing
 PRODUCT_PROPERTY_OVERRIDES += \
