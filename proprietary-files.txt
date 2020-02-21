@@ -107,7 +107,7 @@ vendor/lib/hw/audio.primary.sdm710.so
 vendor/lib64/hw/audio.bluetooth_qti.default.so
 vendor/lib64/hw/audio.primary.sdm710.so
 
-# Bluetooth (aptX)
+# Bluetooth (aptX) - from crosshatch-user 9 PD1A.180720.030 4972053 release-keys
 product/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
 product/lib64/libaptXHD_encoder.so|e13fa70c97caaa24d061678bdee608eb8850a69e
 
@@ -455,7 +455,7 @@ vendor/lib/libmmcamera_faceproc2.so
 vendor/lib64/libmmcamera_faceproc.so
 vendor/lib64/libmmcamera_faceproc2.so
 
-# Charger (binary)
+# Charger (binary) - from grus-user 10 QKQ1.190828.002 9.11.17 release-keys
 bin/chargeonlymode|b60b9f3ee0f18c3d8e9178e6e53351162d2a2251
 
 # Charger
@@ -501,7 +501,6 @@ vendor/lib/libGPQTEEC_vendor.so
 vendor/lib/libGPreqcancel.so
 vendor/lib/libGPreqcancel_svc.so
 vendor/lib/libGPTEE_vendor.so
-vendor/lib/liboemcrypto.so|c8b37d08d0f9da3c2f049200eb5cda20ba551a5b
 vendor/lib/libqisl.so
 vendor/lib/libQSEEComAPI.so
 vendor/lib/librmp.so
@@ -520,7 +519,6 @@ vendor/lib64/libGPQTEEC_vendor.so
 vendor/lib64/libGPreqcancel.so
 vendor/lib64/libGPreqcancel_svc.so
 vendor/lib64/libGPTEE_vendor.so
-vendor/lib64/liboemcrypto.so|983e999d658fb38e8f3667c521da1538f5424668
 vendor/lib64/libqisl.so
 vendor/lib64/libQSEEComAPI.so
 vendor/lib64/librmp.so
@@ -533,11 +531,13 @@ vendor/lib64/libssd.so
 vendor/lib64/libStDrvInt.so
 vendor/lib64/libtzdrmgenprov.so
 
-# DRM-Widevine
+# DRM-Widevine - from PNX_00W_FIH-user 10 QKQ1.190725.002 00W_4_15B release-keys
 vendor/bin/hw/android.hardware.drm@1.2-service.widevine|60fe8f977d6ec64dc00f5708ec625252bb6108ac
 vendor/etc/init/android.hardware.drm@1.2-service.widevine.rc|e3cb732c0bd519988100675edf385d947abf5f6c
+vendor/lib/liboemcrypto.so|c8b37d08d0f9da3c2f049200eb5cda20ba551a5b
 vendor/lib/mediadrm/libdrmclearkeyplugin.so|53dcb11babe6275870ec5f7344433df45fb55266
 vendor/lib/mediadrm/libwvdrmengine.so|90ded8941a123f8b38ab7359e35185f44b673340
+vendor/lib64/liboemcrypto.so|983e999d658fb38e8f3667c521da1538f5424668
 vendor/lib64/libwvhidl.so|fb2d7d52bfa8cc8095d20e476764714c95913d87
 vendor/lib64/mediadrm/libdrmclearkeyplugin.so|dc625f5c937da3f32c766e5969a981525852d5df
 vendor/lib64/mediadrm/libwvdrmengine.so|9681689b67eaf43aba4d2e420c41f1b39352956e
@@ -793,7 +793,7 @@ vendor/lib64/libsdm-color.so
 vendor/lib64/libsdm-diag.so
 vendor/lib64/libtinyxml2_1.so
 
-# HotwordEnrollment
+# HotwordEnrollment - from sirius-user
 -product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk|0741b5ada5d9da2227b4ff0bc77c3be7d6eb430b
 -product/priv-app/HotwordEnrollmentXGoogleHEXAGON/HotwordEnrollmentXGoogleHEXAGON.apk|78d1ef42447dcae6c506ee35a6bea0dd7612af7c
 
@@ -976,12 +976,14 @@ vendor/lib64/libhexagon_nn_stub.so
 vendor/lib/vendor.qti.power.pasrmanager@1.0.so
 vendor/lib64/vendor.qti.power.pasrmanager@1.0.so
 
+# Perf - from pyxis-user 10 QKQ1.190828.002 9.11.28 release-keys
+vendor/etc/perf/perfboostsconfig.xml|4a7e3bde6d95675c3799042cfe513fcb7ab27230
+
 # Perf
 vendor/bin/hw/vendor.qti.hardware.perf@2.0-service
 vendor/bin/msm_irqbalance
 vendor/etc/init/vendor.qti.hardware.perf@2.0-service.rc
 vendor/etc/perf/commonresourceconfigs.xml
-vendor/etc/perf/perfboostsconfig.xml|4a7e3bde6d95675c3799042cfe513fcb7ab27230
 vendor/etc/perf/targetconfig.xml
 vendor/etc/perf/targetresourceconfigs.xml
 vendor/lib/libperfgluelayer.so
@@ -1101,7 +1103,7 @@ product/etc/permissions/telephonyservice.xml
 product/framework/embmslibrary.jar
 product/framework/qcrilhook.jar
 
-# Radio-Telephony
+# Radio-Telephony - from B2N_00W_FIH-user 10 QKQ1.190828.002
 product/framework/qti-telephony-common.jar|74adbf98e89531ac385ab5c4cea3c2549a0d24b0
 
 product/framework/QtiTelephonyServicelibrary.jar
@@ -1381,7 +1383,7 @@ vendor/lib/vendor.qti.hardware.sensorscalibrate@1.0.so
 vendor/lib64/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so
 
-# Sensor-configs
+# Sensor-configs - from pyxis-user 10 QKQ1.190828.002 9.11.28 release-keys
 vendor/etc/sensors/config/adux1050_0.json|75aaecad3af69a52401b01d5621bd4f540e6b7fe
 vendor/etc/sensors/config/ak991x_dri_0.json|d81344c66ad89881058b5cd7c1086b8e27f66dd8
 vendor/etc/sensors/config/bmi160_0.json|74657018d2e6785be0fca50e5b0a8c430bd56b75
@@ -1535,6 +1537,9 @@ vendor/lib/libstreamparser.so
 vendor/lib/vendor.qti.voiceprint@1.0.so
 vendor/lib64/vendor.qti.voiceprint@1.0.so
 
+# WFD - from polaris-user 10 QKQ1.190828.002 V11.0.3.0.QDGMIXM release-keys
+vendor/etc/init/android.hardware.drm@1.1-service.wfdhdcp.rc|c266f08783a17f6583e3f22c85e55b0c200442ea
+
 # WFD
 bin/wfdservice
 etc/init/wfdservice.rc
@@ -1574,7 +1579,6 @@ lib64/libwfduibcsrc.so
 lib64/libwfduibcsrcinterface.so
 -priv-app/WfdService/WfdService.apk
 vendor/bin/wifidisplayhalservice
-vendor/etc/init/android.hardware.drm@1.1-service.wfdhdcp.rc|c266f08783a17f6583e3f22c85e55b0c200442ea
 vendor/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc
 vendor/etc/wfdconfig.xml
 vendor/lib/libhdcp1prov.so
@@ -1610,7 +1614,7 @@ bin/iwpriv
 vendor/bin/cnss-daemon
 vendor/bin/cnss_diag
 
-# WiFi Display
+# WiFi Display - from sirius-user 
 vendor/lib/vendor.qti.hardware.wifidisplaysession@1.0.so|ecdb614197f7813da75323e52eecaa784b4d5ace
 vendor/lib/vendor.qti.hardware.wifidisplaysessionl@1.0-halimpl.so|be2a0059252b24960da2d8433e33dcdedeb2189d
 
