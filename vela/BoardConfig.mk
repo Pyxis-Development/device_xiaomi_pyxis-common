@@ -14,4 +14,5 @@ TARGET_OTA_ASSERT_DEVICE := vela
 TARGET_KERNEL_CONFIG := vela_defconfig
 
 # Inherit from the proprietary version
+-include vendor/meitu/vela/BoardConfigVendor.mk
 -include vendor/xiaomi/pyxis/BoardConfigVendor.mk

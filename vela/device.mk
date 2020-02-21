@@ -5,6 +5,7 @@
 #
 
 # Get non-open-source specific aspects
+$(call inherit-product-if-exists, vendor/meitu/vela/vela-vendor.mk)
 $(call inherit-product-if-exists, vendor/xiaomi/pyxis/pyxis-vendor.mk)
 
 # Inherit common device configuration
