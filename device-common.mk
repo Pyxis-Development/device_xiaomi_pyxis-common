@@ -9,9 +9,6 @@ LOCAL_PATH := device/xiaomi/pyxis
 # Inherit from those products. Most specific first.
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
-# Inherit proprietary files
-$(call inherit-product-if-exists, vendor/xiaomi/pyxis/pyxis-vendor.mk)
-
 # AID/fs configs
 PRODUCT_PACKAGES += \
     fs_config_files

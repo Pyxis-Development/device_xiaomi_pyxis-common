@@ -7,7 +7,7 @@
 
 set -e
 
-DEVICE=pyxis
+DEVICE_COMMON=pyxis
 VENDOR=xiaomi
 
 INITIAL_COPYRIGHT_YEAR=2019
@@ -26,12 +26,12 @@ fi
 source "${HELPER}"
 
 # Initialize the helper
-setup_vendor "${DEVICE}" "${VENDOR}" "${HAVOC_ROOT}"
+setup_vendor "${DEVICE_COMMON}" "${VENDOR}" "${HAVOC_ROOT}" true
 
 # Copyright headers and guards
-write_headers
+write_headers "pyxis vela"
 
-# The standard blobs
+# The standard common blobs
 write_makefiles "${MY_DIR}/proprietary-files.txt" true
 
 # Finish
