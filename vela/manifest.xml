@@ -1,0 +1,20 @@
+<manifest version="1.0" type="device" target-level="3"> 
+    <hal format="hidl">
+        <name>vendor.meitu.hardware.camsys</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IMeituCamera</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.meitu.hardware.postproc</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>ICameraPostproc</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+</manifest>
