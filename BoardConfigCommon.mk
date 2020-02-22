@@ -168,9 +168,6 @@ PRODUCT_SOONG_NAMESPACES += \
     $(PLATFORM_PATH) \
     vendor/nxp/opensource/pn5xx
 
-# Telephony
-TARGET_USES_ALTERNATIVE_MANUAL_NETWORK_SELECT := true
-
 # Treble
 PRODUCT_VENDOR_MOVE_ENABLED := true
 
