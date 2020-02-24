@@ -33,7 +33,6 @@ PRODUCT_PACKAGES += \
     libqcompostprocbundle \
     libqcomvisualizer \
     libqcomvoiceprocessing \
-    libsndmonitor \
     libvolumelistener
 
 # Audio Configs
@@ -57,10 +56,8 @@ TARGET_SCREEN_WIDTH := 1080
 PRODUCT_PACKAGES += \
     audio.bluetooth.default \
     android.hardware.bluetooth.audio@2.0-impl \
-    liba2dpoffload \
     libbthost_if \
     libldacBT_dec \
-    vendor.qti.hardware.btconfigstore@1.0.vendor \
     vendor.qti.hardware.bluetooth_audio@2.0.vendor
     
 # Camera
@@ -210,8 +207,6 @@ PRODUCT_PACKAGES += \
     
 # Media
 PRODUCT_PACKAGES += \
-    libhdmiedid \
-    libhfp \
     libc2dcolorconvert \
     libOmxAacEnc \
     libOmxAmrEnc \
