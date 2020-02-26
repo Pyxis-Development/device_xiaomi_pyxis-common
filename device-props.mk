@@ -326,6 +326,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.redir_party_num=1 \
     persist.vendor.radio.report_codec=1 \
     persist.vendor.radio.sib16_support=1 \
+    persist.sys.fflag.override.settings_network_and_internet_v2=true \
     ril.subscription.types=RUIM \
     ro.carrier=unknown \
     ro.com.android.dataroaming=true \
