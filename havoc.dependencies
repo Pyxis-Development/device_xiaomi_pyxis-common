@@ -1,7 +1,7 @@
 [
   {
     "remote":      "github",
-    "repository":  "Mashopy/kernel_xiaomi_pyxis",
+    "repository":  "Mashopy/malachite-4.9",
     "target_path": "kernel/xiaomi/pyxis",
     "branch":      "master"
   }
