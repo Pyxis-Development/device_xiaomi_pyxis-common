@@ -1,11 +1,11 @@
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/havoc_pyxis.mk \
-    $(LOCAL_DIR)/havoc_vela.mk
+    $(LOCAL_DIR)/derp_pyxis.mk \
+    $(LOCAL_DIR)/derp_vela.mk
 
 COMMON_LUNCH_CHOICES := \
-    havoc_pyxis-user \
-    havoc_pyxis-userdebug \
-    havoc_pyxis-eng \
-    havoc_vela-user \
-    havoc_vela-userdebug \
-    havoc_vela-eng
+    derp_pyxis-user \
+    derp_pyxis-userdebug \
+    derp_pyxis-eng \
+    derp_vela-user \
+    derp_vela-userdebug \
+    derp_vela-eng
