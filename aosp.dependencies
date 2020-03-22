@@ -1,13 +1,13 @@
 [
   {
     "remote":      "github",
-    "repository":  "Mashopy/malachite-4.9",
+    "repository":  "Pyxis-Development/sandcastle",
     "target_path": "kernel/xiaomi/pyxis",
-    "branch":      "master"
+    "branch":      "pyxis-4.9"
   }
   {
     "remote":      "github",
-    "repository":  "Mashopy/vendor_xiaomi_pyxis",
+    "repository":  "Pyxis-Development/vendor_xiaomi_pyxis",
     "target_path": "vendor/xiaomi/pyxis",
     "branch":      "ten"
   }

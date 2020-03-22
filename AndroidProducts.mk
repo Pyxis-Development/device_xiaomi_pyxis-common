@@ -1,11 +1,11 @@
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/derp_pyxis.mk \
-    $(LOCAL_DIR)/derp_vela.mk
+    $(LOCAL_DIR)/aosp_pyxis.mk \
+    $(LOCAL_DIR)/aosp_vela.mk
 
 COMMON_LUNCH_CHOICES := \
-    derp_pyxis-user \
-    derp_pyxis-userdebug \
-    derp_pyxis-eng \
-    derp_vela-user \
-    derp_vela-userdebug \
-    derp_vela-eng
+    aosp_pyxis-user \
+    aosp_pyxis-userdebug \
+    aosp_pyxis-eng \
+    aosp_vela-user \
+    aosp_vela-userdebug \
+    aosp_vela-eng
