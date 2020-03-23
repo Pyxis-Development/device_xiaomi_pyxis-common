@@ -1,0 +1,2 @@
+# Fingerprint
+/system/etc/goodix(/.*)?      u:object_r:fingerprint_data_file:s0

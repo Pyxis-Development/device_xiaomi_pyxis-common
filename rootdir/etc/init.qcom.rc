@@ -806,6 +806,10 @@ service wifi-crda /vendor/bin/init.crda.sh
 on property:sys.boot_completed=1
     start qcom-post-boot
 
+on post-fs
+    mount none /system/etc/goodix/BMatrix.so /mnt/vendor/persist/goodix/BMatrix.so bind
+    mount none /system/etc/goodix/caliParamsInfo.so /mnt/vendor/persist/goodix/caliParamsInfo.so bind
+
 on property:ro.vendor.ril.mbn_copy_completed=1
     write /data/vendor/radio/copy_complete 1
 
