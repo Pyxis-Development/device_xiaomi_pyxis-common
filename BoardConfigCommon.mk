@@ -117,10 +117,6 @@ DEVICE_MATRIX_FILE := $(PLATFORM_PATH)/compatibility_matrix.xml
 # Keystore
 TARGET_PROVIDES_KEYMASTER := true
 
-# NFC
-TARGET_USES_NQ_NFC := true
-BOARD_NFC_CHIPSET := pn553
-
 # Partitions
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_CACHEIMAGE_PARTITION_SIZE := 268435456
@@ -167,11 +163,6 @@ include device/qcom/sepolicy/sepolicy.mk
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(PLATFORM_PATH)/sepolicy/private
 BOARD_PLAT_PUBLIC_SEPOLICY_DIR += $(PLATFORM_PATH)/sepolicy/public
 BOARD_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy/vendor
-
-# Soong namespaces
-PRODUCT_SOONG_NAMESPACES += \
-    $(PLATFORM_PATH) \
-    vendor/nxp/opensource/pn5xx
 
 # Treble
 PRODUCT_VENDOR_MOVE_ENABLED := true
