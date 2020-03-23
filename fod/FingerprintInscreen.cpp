@@ -41,23 +41,14 @@
 #define FOD_SENSOR_Y 1910
 #define FOD_SENSOR_SIZE 190
 
-#define BRIGHTNESS_PATH "/sys/class/backlight/panel0-backlight/brightness"
 
 namespace vendor {
 namespace lineage {
 namespace biometrics {
 namespace fingerprint {
 namespace inscreen {
-namespace V1_0 {
+namespace V1_1 {
 namespace implementation {
-
-template <typename T>
-static T get(const std::string& path, const T& def) {
-    std::ifstream file(path);
-    T result;
-    file >> result;
-    return file.fail() ? def : result;
-}
 
 template <typename T>
 static void set(const std::string& path, const T& value) {
@@ -90,15 +81,22 @@ Return<void> FingerprintInscreen::onFinishEnroll() {
     return Void();
 }
 
+Return<void> FingerprintInscreen::switchHbm(bool enabled) {
+    if (enabled) {
+        xiaomiDisplayFeatureService->setFeature(0, 11, 1, 4);
+        xiaomiDisplayFeatureService->setFeature(0, 11, 1, 3);
+    } else {
+        xiaomiDisplayFeatureService->setFeature(0, 11, 0, 3);
+    }
+    return Void();
+}
+
 Return<void> FingerprintInscreen::onPress() {
-    xiaomiDisplayFeatureService->setFeature(0, 11, 1, 4);
-    xiaomiDisplayFeatureService->setFeature(0, 11, 1, 3);
     xiaomiFingerprintService->extCmd(COMMAND_NIT, PARAM_NIT_630_FOD);
     return Void();
 }
 
 Return<void> FingerprintInscreen::onRelease() {
-    xiaomiDisplayFeatureService->setFeature(0, 11, 0, 3);
     xiaomiFingerprintService->extCmd(COMMAND_NIT, PARAM_NIT_NONE);
     return Void();
 }
@@ -129,8 +127,8 @@ Return<void> FingerprintInscreen::setLongPressEnabled(bool) {
     return Void();
 }
 
-Return<int32_t> FingerprintInscreen::getDimAmount(int32_t)) {
-    int realBrightness = get(BRIGHTNESS_PATH, 0);
+Return<int32_t> FingerprintInscreen::getDimAmount(int32_t brightness) {
+    int realBrightness = brightness * 2047 / 255;
     float alpha;
 
     if (realBrightness > 500) {
@@ -151,7 +149,7 @@ Return<void> FingerprintInscreen::setCallback(const sp<IFingerprintInscreenCallb
 }
 
 }  // namespace implementation
-}  // namespace V1_0
+}  // namespace V1_1
 }  // namespace inscreen
 }  // namespace fingerprint
 }  // namespace biometrics
