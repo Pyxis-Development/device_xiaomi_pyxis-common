@@ -20,13 +20,13 @@ cc_binary {
     srcs: ["service.cpp", "Light.cpp"],
     vendor: true,
     shared_libs: [
-        "android.hardware.light@2.0",
         "libbase",
         "libhardware",
         "libhidlbase",
         "libhidltransport",
-        "libhwbinder",
         "liblog",
+        "libhwbinder",
         "libutils",
+        "android.hardware.light@2.0",
     ],
 }
