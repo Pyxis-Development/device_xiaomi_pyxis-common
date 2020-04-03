@@ -34,6 +34,9 @@ on early-init
     mount debugfs debugfs /sys/kernel/debug
     chmod 0755 /sys/kernel/debug
 
+    mount none /system/lib/modules /vendor/lib/modules bind
+    exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules audio_wglink audio_q6_pdr audio_q6_notifier audio_apr audio_adsp_loader audio_analog_cdc audio_q6 audio_snd-soc-tas2557 audio_spk_id audio_native audio_usf audio_pinctrl_lpi audio_pinctrl_wcd audio_swr audio_platform audio_hdmi audio_wcd_cpe audio_wcd_spi audio_stub audio_wcd_core audio_wsa881x audio_wcd9335 audio_digital_cdc audio_hdm audio_cs35l41 audio_cpe_lsm audio_tas2562 audio_msm_sdw audio_machine_sdm710
+
     # Create symlink for vendor mount points
     symlink /vendor/firmware_mnt /firmware
     symlink /vendor/bt_firmware /bt_firmware

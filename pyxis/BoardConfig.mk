@@ -11,7 +11,9 @@
 TARGET_OTA_ASSERT_DEVICE := pyxis
 
 # Kernel
+ifeq ($(TARGET_PREBUILT_KERNEL),)
 TARGET_KERNEL_CONFIG := pyxis_defconfig
+endif
 
 # Vendor init
 TARGET_INIT_VENDOR_LIB := //$(PLATFORM_PATH)/pyxis:libinit_pyxis

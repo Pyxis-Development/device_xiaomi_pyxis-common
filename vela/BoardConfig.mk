@@ -11,7 +11,9 @@
 TARGET_OTA_ASSERT_DEVICE := vela
 
 # Kernel
+ifeq ($(TARGET_PREBUILT_KERNEL),)
 TARGET_KERNEL_CONFIG := vela_defconfig
+endif
 
 # HIDL
 DEVICE_MANIFEST_FILE += $(PLATFORM_PATH)/vela/manifest.xml
