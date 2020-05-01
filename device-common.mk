@@ -211,11 +211,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     lights.sdm710 \
     android.hardware.light@2.0-service.xiaomi_pyxis
-    
-# LiveDisplay
-PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.0-service-sdm \
-    vendor.lineage.livedisplay@2.0-service.xiaomi_pyxis
   
 # Media
 PRODUCT_PACKAGES += \
