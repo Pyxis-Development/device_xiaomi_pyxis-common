@@ -317,11 +317,11 @@ PRODUCT_COPY_FILES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.2-service.xiaomi_pyxis
+    android.hardware.power@1.3-service.pixel-libperfmgr
 
 # Power Config
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/power/configs/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml
+    $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
     
 # Privapp-permissions
 PRODUCT_COPY_FILES += \
