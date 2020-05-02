@@ -1,0 +1,20 @@
+[
+  {
+    "remote":      "github",
+    "repository":  "nysascape/kernel_pyxis_vela-phoenix,
+    "target_path": "kernel/xiaomi/pyxis",
+    "branch":      "ten"
+  },
+  {
+    "remote":      "github",
+    "repository":  "Pyxis-Development/vendor_xiaomi_pyxis-common",
+    "target_path": "vendor/xiaomi/pyxis-common",
+    "branch":      "ten"
+  },
+  {
+    "remote":      "github",
+    "repository":  "Pyxis-Development/vendor_xiaomi-firmware",
+    "target_path": "vendor/xiaomi/firmware",
+    "branch":      "master"
+  }
+]
