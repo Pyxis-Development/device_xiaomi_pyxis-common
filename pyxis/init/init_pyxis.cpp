@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 The LineageOS Project
+ * Copyright (C) 2019-2020 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,6 +18,7 @@
 #include <android-base/properties.h>
 #define _REALLY_INCLUDE_SYS__SYSTEM_PROPERTIES_H_
 #include <sys/_system_properties.h>
+#include <sys/sysinfo.h>
 
 #include "property_service.h"
 #include "vendor_init.h"
@@ -34,31 +35,37 @@ void property_override(char const prop[], char const value[])
     else
         __system_property_add(prop, strlen(prop), value, strlen(value));
 }
+
+void property_override_dual(char const system_prop[], char const vendor_prop[],
+    char const value[])
+{
+    property_override(system_prop, value);
+    property_override(vendor_prop, value);
+}
+
 void load_pyxisglobal() {
-    property_override("ro.product.model", "Mi 9 Lite");
-    property_override("ro.build.product", "pyxis");
-    property_override("ro.product.device", "pyxis");
-    property_override("ro.build.description", "pyxis-user 9 PKQ1.181121.001 V11.3.2.0.PFCMIXM release-keys");
-    property_override("ro.build.fingerprint", "google/walleye/walleye:8.1.0/OPM1.171019.011/4448085:user/release-keys");
+    property_override_dual("ro.product.model", "ro.product.vendor.model", "Mi 9 Lite");
+    property_override("ro.build.description", "pyxis-user 10 QKQ1.190828.002 V11.0.1.0.QFCMIXM release-keys");
 }
 
 void load_pyxis() {
-    property_override("ro.product.model", "MI CC 9");
-    property_override("ro.build.product", "pyxis");
-    property_override("ro.product.device", "pyxis");
-    property_override("ro.build.description", "pyxis-user 9 PKQ1.181121.001 V11.3.2.0.PFCCNXM release-keys");
-    property_override("ro.build.fingerprint", "google/walleye/walleye:8.1.0/OPM1.171019.011/4448085:user/release-keys");
+    property_override_dual("ro.product.model", "ro.product.vendor.model", "MI CC 9");
+    property_override("ro.build.description", "pyxis-user 10 QKQ1.190828.002 V11.0.3.0.QFCCNXM release-keys");
 }
 
 void vendor_load_properties() {
     std::string region = android::base::GetProperty("ro.boot.hwc", "");
 
-    if (region.find("GLOBAL") != std::string::npos) {
-        load_pyxisglobal();
-    } else if (region.find("CN") != std::string::npos) {
+    if (region.find("CN") != std::string::npos) {
         load_pyxis();
+    } else if (region.find("GLOBAL") != std::string::npos) {
+        load_pyxisglobal();
     } else {
         LOG(ERROR) << __func__ << ": unexcepted region!";
     }
-
+    
+    property_override("ro.oem_unlock_supported", "0");
+    property_override("ro.apex.updatable", "true");
+    property_override("ro.control_privapp_permissions", "log");
+    property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "google/coral/coral:10/QQ2A.200405.005/6254899:user/release-keys");
 }

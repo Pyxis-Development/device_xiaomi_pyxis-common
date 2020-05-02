@@ -5,7 +5,7 @@
  *  for attribution purposes only.
  *
  * Copyright (C) 2012 The Android Open Source Project
- * Copyright (C) 2018-2019 The LineageOS Project
+ * Copyright (C) 2018-2020 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -32,25 +32,31 @@
 
 typedef struct {
     const char *product_device;
+    const char *product_region;
     const char *product_model;
 } device_t;
 
 static const device_t devices[] = {
-    {"pyxis", "Xiaomi MI CC 9 / Mi 9 Lite"},
-    {"vela", "Xiaomi MI CC 9 Meitu Edition"},
+    {"pyxis", "CN", "MI CC 9"},
+    {"pyxis", "GLOBAL", "Mi 9 Lite"},
+    {"vela", "CN", "MI CC 9 Meitu Edition"},
 };
 
 static inline const char *BtmGetDefaultName()
 {
     char product_device[PROPERTY_VALUE_MAX];
+    char product_region[PROPERTY_VALUE_MAX];
     property_get("ro.product.device", product_device, "");
+    property_get("ro.boot.hwc", product_region, "");
 
     for (unsigned int i = 0; i < ARRAY_SIZE(devices); i++) {
         device_t device = devices[i];
 
-        if (strcmp(device.product_device, product_device) == 0) {
-            return device.product_model;
-        }
+        if (strcmp(device.product_device, product_device) == 0 &&
+               (strcmp(device.product_region, product_region) == 0 ||
+               strcmp(device.product_region, "ALL") == 0)) {
+           return device.product_model;
+       }
     }
 
     // Fallback to ro.product.model
