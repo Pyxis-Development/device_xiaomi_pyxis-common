@@ -7,7 +7,7 @@
 
 set -e
 
-DEVICE_COMMON=pyxis
+DEVICE_COMMON=pyxis-common
 VENDOR=xiaomi
 
 INITIAL_COPYRIGHT_YEAR=2019

@@ -7,7 +7,7 @@
 
 set -e
 
-DEVICE=pyxis
+DEVICE=pyxis-common
 VENDOR=xiaomi
 
 # Load extract_utils and do some sanity checks

@@ -10,7 +10,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 
 # Inherit from vela device
-$(call inherit-product, device/xiaomi/pyxis/vela/device.mk)
+$(call inherit-product, device/xiaomi/pyxis-common/vela/device.mk)
 
 # Include some common AOSP stuff
 TARGET_BOOT_ANIMATION_RES := 1080

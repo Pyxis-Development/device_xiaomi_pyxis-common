@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-LOCAL_PATH := device/xiaomi/pyxis
+LOCAL_PATH := device/xiaomi/pyxis-common
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)

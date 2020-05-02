@@ -6,7 +6,7 @@
 
 BOARD_VENDOR := xiaomi
 
-PLATFORM_PATH := device/xiaomi/pyxis
+PLATFORM_PATH := device/xiaomi/pyxis-common
 
 # Architecture
 TARGET_ARCH := arm64

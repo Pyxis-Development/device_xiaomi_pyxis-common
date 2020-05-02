@@ -179,32 +179,22 @@ vendor/lib64/libcvpcpuRev_skel.so
 # Camera
 lib/libchromaflash.so
 lib64/libseemore.so
-vendor/lib/camera/com.qti.sensor.pyxis_imx582.so
-vendor/lib/camera/com.qti.sensor.pyxis_imx586.so
 vendor/lib/camera/com.qti.sensor.pyxis_ov02a10.so
 vendor/lib/camera/com.qti.sensor.pyxis_s5k4h7.so
 vendor/lib/camera/com.qti.sensor.pyxis_s5kgd1.so
-vendor/lib/camera/com.qti.sensormodule.pyxis_luxvisions_imx582_cn_i.bin
-vendor/lib/camera/com.qti.sensormodule.pyxis_luxvisions_imx586_cn_i.bin
 vendor/lib/camera/com.qti.sensormodule.pyxis_luxvisions_ov02a10_cn_i.bin
 vendor/lib/camera/com.qti.sensormodule.pyxis_luxvisions_s5k4h7_cn_i.bin
-vendor/lib/camera/com.qti.sensormodule.pyxis_ofilm_imx582_cn_ii.bin
 vendor/lib/camera/com.qti.sensormodule.pyxis_ofilm_ov02a10_cn_ii.bin
 vendor/lib/camera/com.qti.sensormodule.pyxis_ofilm_s5k4h7_cn_ii.bin
 vendor/lib/camera/com.qti.sensormodule.pyxis_ofilm_s5kgd1_cn_ii.bin
 vendor/lib/camera/com.qti.sensormodule.pyxis_sunny_s5kgd1_cn_i.bin
 vendor/lib/camera/com.qti.tuned.default.bin
-vendor/lib/camera/com.qti.tuned.pyxis_luxvisions_imx582_cn_i.bin
-vendor/lib/camera/com.qti.tuned.pyxis_luxvisions_imx586_cn_i.bin
 vendor/lib/camera/com.qti.tuned.pyxis_luxvisions_ov02a10_cn_i.bin
 vendor/lib/camera/com.qti.tuned.pyxis_luxvisions_s5k4h7_cn_i.bin
-vendor/lib/camera/com.qti.tuned.pyxis_ofilm_imx582_cn_ii.bin
 vendor/lib/camera/com.qti.tuned.pyxis_ofilm_ov02a10_cn_ii.bin
 vendor/lib/camera/com.qti.tuned.pyxis_ofilm_s5k4h7_cn_ii.bin
 vendor/lib/camera/com.qti.tuned.pyxis_ofilm_s5kgd1_cn_ii.bin
-vendor/lib/camera/com.qti.tuned.pyxis_ofilm_s5kgd1_cn_ii_global.bin
 vendor/lib/camera/com.qti.tuned.pyxis_sunny_s5kgd1_cn_i.bin
-vendor/lib/camera/com.qti.tuned.pyxis_sunny_s5kgd1_cn_i_global.bin
 vendor/lib/camera/components/com.altek.node.depurple.so
 vendor/lib/camera/components/com.altek.node.distortioncorrection.so
 vendor/lib/camera/components/com.arcsoft.node.bodyslim.so
@@ -281,7 +271,6 @@ vendor/lib/libmegface.so
 vendor/lib/libMegviiFacepp-0.5.2.so
 vendor/lib/libmialgo_fs.so
 vendor/lib/libmialgo_sd.so
-vendor/lib/libmibokeh_712.so
 vendor/lib/libmpbase.so
 vendor/lib/libSNPE.so
 vendor/lib/libsnsapi.so
@@ -295,14 +284,12 @@ vendor/lib/libVDSuperPhotoAPI.so
 vendor/lib/libvidhance.so
 vendor/lib/libXMFD_AgeGender.so
 vendor/lib/lib_denoiser3.so
-vendor/lib/mibokeh_712_opencl.bin
 vendor/lib64/libcamera_nn_stub.so
 vendor/lib64/libcamxfdalgov7.so
 vendor/lib64/libcapiv2svacnn.so
 vendor/lib64/libcapiv2vop.so
 vendor/lib64/libmialgoengine.so
 vendor/lib64/libmialgo_fs.so
-vendor/lib64/libmibokeh_712.so
 vendor/lib64/libmpbase.so
 vendor/lib64/libsnsapi.so
 vendor/lib64/libsnsdiaglog.so
@@ -463,9 +450,6 @@ vendor/etc/init/android.hardware.drm@1.2-service.widevine.rc
 vendor/lib/mediadrm/libwvdrmengine.so
 vendor/lib64/libwvhidl.so
 vendor/lib64/mediadrm/libwvdrmengine.so
-
-# Display
-vendor/etc/dsi_ss_ea8076_fhd_cmd_display_f3b_mi.xml
 
 # Display-Hardware
 vendor/lib/libsdmextension.so
