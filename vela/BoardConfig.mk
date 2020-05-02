@@ -13,9 +13,6 @@ TARGET_OTA_ASSERT_DEVICE := vela
 # Kernel
 TARGET_KERNEL_CONFIG := phoenix_defconfig
 
-# HIDL
-DEVICE_MANIFEST_FILE += $(PLATFORM_PATH)/vela/manifest.xml
-
 # Inherit from the proprietary version
 -include vendor/meitu/vela/BoardConfigVendor.mk
 -include vendor/xiaomi/pyxis-common/BoardConfigVendor.mk
