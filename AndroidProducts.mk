@@ -1,11 +1,11 @@
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_pyxis.mk \
-    $(LOCAL_DIR)/aosp_vela.mk
+    $(LOCAL_DIR)/arrow_pyxis.mk \
+    $(LOCAL_DIR)/arrow_vela.mk
 
 COMMON_LUNCH_CHOICES := \
-    aosp_pyxis-user \
-    aosp_pyxis-userdebug \
-    aosp_pyxis-eng \
-    aosp_vela-user \
-    aosp_vela-userdebug \
-    aosp_vela-eng
+    arrow_pyxis-user \
+    arrow_pyxis-userdebug \
+    arrow_pyxis-eng \
+    arrow_vela-user \
+    arrow_vela-userdebug \
+    arrow_vela-eng
